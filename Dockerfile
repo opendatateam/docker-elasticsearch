@@ -3,7 +3,7 @@
 # Based on Debian
 ##########################################
 
-FROM elasticsearch:2.4.3
+FROM elasticsearch:2.4.4
 
 # Install uData system dependencies
 RUN plugin install analysis-icu
