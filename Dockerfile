@@ -9,7 +9,7 @@ FROM elasticsearch:2.4.5-alpine
 RUN plugin install analysis-icu
 
 # Install curl for healthcheck
-RUN apk add curl
+RUN apk add --no-cache curl
 
 # Provide healthcheck for Docker 1.12+
 HEALTHCHECK --interval=5s --timeout=3s CMD curl --fail http://localhost:9200/ || exit 1
